@@ -5,9 +5,23 @@
 {% block body%}
 <div class="container">
   <div class="row">
-    <div class="col-lg col-md col-sm bg-dark p-4">
-         
+    <div class="col-lg col-md col-sm ">
+    {% for i in data %}
+      <div class="div_S1 d-flex m-3 ">
+        <img src="{{i.photo.url}} " class="img_s1 rounded-4 justify-content-center mt-2">
+        <div class="p_s1" >
+          <h2>{{i.name}}</h2>
+          <h4>{{i.rate}}</h4>
+          <p>Beach front</p>
+          <p>{{i.desc}}</p>
+        </div>
+        <div class="btn_s1">
+          <a href="{% url 'motel:details' i.id %}"><button class="btn btn-primary">Show detail</button></a>
+        </div>
+      </div> 
+      {% endfor %} 
      </div>
+    
   </div>
 </div>
 

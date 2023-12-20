@@ -1,4 +1,4 @@
-img{width: 100%;}
+
 @import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Freehand&family=Fuggles&family=Josefin+Sans:wght@700&family=Libre+Baskerville&family=Playfair+Display&display=swap');
 .bt{color: rgb(234, 230, 225);}
@@ -135,3 +135,18 @@ background-size: cover;height: 550px;filter: brightness(100%);}
 
   .download-icon {
       margin-right: 5px;font-size: 20px;color:rgb(16,90,192);}
+
+
+    /* singapor */
+
+.img_s1{width: 150px;height: 150px;}
+.div_S1{border: #dcf2ff solid 1px;}
+.p_s1{padding-left: 10px;}
+.btn_s1{position: absolute;
+        right: 20%;
+        padding-top: 30px;
+}
+
+/* details */
+
+.div_dt1{background-color: rgb(225, 190, 51);}
