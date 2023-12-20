@@ -39,15 +39,25 @@
       <button class="nav-link active bt" id="pills-ABOUT US-tab" data-bs-toggle="pill" data-bs-target="#pills-ABOUT US" type="button" role="tab" aria-controls="pills-ABOUT US" aria-selected="true">ABOUT US</button>
     </li>
    
+    {% if user.is_authenticated %}
+    {% comment %} <li class="nav-item" role="presentation">
+      <button class="nav-link active bt" id="pills-ABOUT US-tab" data-bs-toggle="pill" data-bs-target="#pills-ABOUT US" type="button" role="tab" aria-controls="pills-ABOUT US" aria-selected="true">{{user.user}}</button>
+    </li> {% endcomment %}
+    <li class="nav-item" role="presentation">
+      <a  href="{% url 'credential:logout' %}"><button class="nav-link bt" id="pills-NEWS & EVENTS-tab" data-bs-toggle="pill" data-bs-target="#pills-NEWS & EVENTS" type="button" role="tab" aria-controls="pills-NEWS & EVENTS" aria-selected="false">LOGOUT</button></a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a  href="{% url 'motel:registerhotel' %}"><button class="nav-link bt" id="pills-NEWS & EVENTS-tab" data-bs-toggle="pill" data-bs-target="#pills-NEWS & EVENTS" type="button" role="tab" aria-controls="pills-NEWS & EVENTS" aria-selected="false">REGISTER HOTEL</button></a>
+    </li>
+    {% else %}
     <li class="nav-item" role="presentation">
       <a  href="{% url 'credential:register' %}"><button class="nav-link bt" id="pills-NEWS & EVENTS-tab" data-bs-toggle="pill" data-bs-target="#pills-NEWS & EVENTS" type="button" role="tab" aria-controls="pills-NEWS & EVENTS" aria-selected="false">REGISTER</button></a>
     </li>
     <li class="nav-item" role="presentation">
       <a  href="{% url 'credential:login' %}"><button class="nav-link bt" id="pills-NEWS & EVENTS-tab" data-bs-toggle="pill" data-bs-target="#pills-NEWS & EVENTS" type="button" role="tab" aria-controls="pills-NEWS & EVENTS" aria-selected="false">LOGIN</button></a>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link bt" id="pills-GALLERY-tab" data-bs-toggle="pill" data-bs-target="#pills-GALLERY" type="button" role="tab" aria-controls="pills-GALLERY" aria-selected="false" >LOGOUT</button>
-    </li>
+  {% endif %}
+
     <li class="nav-item" role="presentation">
       <button class="nav-link bt" id="pills-CONTACT UStab" data-bs-toggle="pill" data-bs-target="#pills-CONTACT US" type="button" role="tab" aria-controls="pills-CONTACT US" aria-selected="false" >CONTACT US</button>
     </li>
